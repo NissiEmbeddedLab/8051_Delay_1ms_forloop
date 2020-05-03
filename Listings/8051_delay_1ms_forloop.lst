@@ -1,0 +1,42 @@
+C51 COMPILER V9.60.0.0   8051_DELAY_1MS_FORLOOP                                            05/03/2020 11:42:36 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE 8051_DELAY_1MS_FORLOOP
+OBJECT MODULE PLACED IN .\Objects\8051_delay_1ms_forloop.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE 8051_delay_1ms_forloop.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRI
+                    -NT(.\Listings\8051_delay_1ms_forloop.lst) TABS(2) OBJECT(.\Objects\8051_delay_1ms_forloop.obj)
+
+line level    source
+
+   1          #include<reg51.h>
+   2          void MSDelay(unsigned int);
+   3          void main(void)
+   4          {
+   5   1        while(1)
+   6   1        {
+   7   2          P1 = 0xFF;
+   8   2        MSDelay(1);
+   9   2        P1 = 0x00;
+  10   2        MSDelay(1);
+  11   2        }
+  12   1      }
+  13          void MSDelay(unsigned int itime)
+  14          {
+  15   1      unsigned int i,j;
+  16   1      for(i=0;i<itime;i++)
+  17   1      for(j=0;j<1275;j++);
+  18   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     53    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

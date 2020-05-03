@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\8051_delay_1ms_forloop.obj" 
+TO ".\Objects\8051_delay_1ms_forloop" 
+PRINT(".\Listings\8051_delay_1ms_forloop.m51") RAMSIZE(256) 
